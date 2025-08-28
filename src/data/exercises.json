@@ -1,0 +1,75 @@
+{
+  "chest": [
+    {
+      "name": "Push-up",
+      "media": "/assets/pushup.gif",
+      "instructions": "Start in plank position, lower chest to floor, push back up.",
+      "equipment": "Bodyweight",
+      "difficulty": "Beginner"
+    },
+    {
+      "name": "Barbell Bench Press",
+      "media": "/assets/dumbell-incline.gif",
+      "instructions": "Lie on bench, lower bar to chest, press back up.",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate"
+    }
+  ],
+  "biceps": [
+    {
+      "name": "Dumbbell Curl",
+      "media": "/assets/bicep_curl.gif",
+      "instructions": "Hold dumbbells, curl upward, control back down.",
+      "equipment": "Dumbbell",
+      "difficulty": "Beginner"
+    }
+  ],
+
+"abs": [
+    {
+      "name": "Plank",
+      "media": "assets/male-bodyweight-forearm-plank-front.gif",
+      "instructions": "Hold a push-up position with forearms on the ground.",
+      "equipment": "Bodyweight",
+      "difficulty": "Beginner"
+    },
+    {
+        "name": "Crunch",
+        "media": "assets/male-bodyweight-crunch-front.gif",
+        "instructions": "Lie on back, knees bent, lift shoulders off ground.",  
+        "equipment": "Bodyweight",
+        "difficulty": "Beginner"
+    }
+  ],
+  "lats":[{
+    "name": "Pull-up",
+    "media": "assets/male-bodyweight-pullup-front.gif",
+    "instructions": "Hang from bar, pull body up until chin is above bar.",         
+    "equipment": "Bodyweight",
+    "difficulty": "Intermediate"
+  },
+  {
+    "name":"Deadlift",
+    "media":"assets/deadlift.gif",
+    "instructions":"Stand with feet hip-width apart, bend at hips and knees to grasp barbell, lift by extending hips and knees to full stand.",
+    "equipment":"Barbell", 
+    "difficulty":"Intermediate"
+  }
+],
+    "triceps": [
+        {
+        "name": "Tricep Dip",
+        "media": "assets/male-dumbbell-overhead-tricep-extension-front.gif",
+        "instructions": "Lower body by bending arms, push back up.",
+        "equipment": "Bodyweight",
+        "difficulty": "Beginner"
+        },
+        {
+        "name": "Tricep Pushdown",  
+        "media": "assets/male-barbell-skullcrusher-side_B7Z6225.gif",
+        "instructions": "Push cable down by extending arms, control back up.",
+        "equipment": "Cable Machine",
+        "difficulty": "Intermediate"
+        }
+    ]
+}
