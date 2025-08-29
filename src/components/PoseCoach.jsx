@@ -9,15 +9,31 @@ function PoseCoach() {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const intervalRef = useRef(null);
+const [challengeTime, setChallengeTime] = useState(30); // default 30s
+const [challengeActive, setChallengeActive] = useState(false);
 
+  // --- Helper: Speak text
+function speak(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.rate = 1; // speed
+  window.speechSynthesis.speak(utterance);
+}
   useEffect(() => {
-    if (isRunning) {
-      intervalRef.current = setInterval(() => {
-        setTime((t) => t + 1);
-      }, 1000);
-    }
-    return () => clearInterval(intervalRef.current);
-  }, [isRunning]);
+  if (isRunning) {
+    intervalRef.current = setInterval(() => {
+      setTime((t) => {
+        if (challengeActive && t + 1 >= challengeTime) {
+          clearInterval(intervalRef.current);
+          setIsRunning(false);
+          setChallengeActive(false);
+          speak(`Challenge over! You did ${count} reps`);
+        }
+        return t + 1;
+      });
+    }, 1000);
+  }
+  return () => clearInterval(intervalRef.current);
+}, [isRunning, challengeActive, challengeTime, count]);
 
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
@@ -57,6 +73,7 @@ function PoseCoach() {
 
   // --- Helper: Count reps (modified for exercise type)
   function countExercise(angle, side, exercise) {
+     let newCount = count; // local copy
     if (exercise === "bicep") {
       if (side === "left") {
         if (angle > 150) {
@@ -65,7 +82,9 @@ function PoseCoach() {
         if (angle < 50 && !leftArmUp.current) {
           leftReps.current += 1;
           leftArmUp.current = true;
-          setCount(leftReps.current + rightReps.current);
+           // setCount(leftReps.current + rightReps.current);
+          newCount = leftReps.current + rightReps.current;
+        setCount(newCount)
         }
       } else { // side === "right"
         if (angle > 150) {
@@ -74,7 +93,9 @@ function PoseCoach() {
         if (angle < 50 && !rightArmUp.current) {
           rightReps.current += 1;
           rightArmUp.current = true;
-          setCount(leftReps.current + rightReps.current);
+           // setCount(leftReps.current + rightReps.current);
+          newCount = leftReps.current + rightReps.current;
+        setCount(newCount)
         }
       }
     } else if (exercise === "squat") {
@@ -84,11 +105,14 @@ function PoseCoach() {
         squatDown.current = true;
         setCount(squatReps.current);
       }
-      if (angle > 160) {
+if (angle > 160) {
         squatDown.current = false;
-      }
-    }
+      }  }
+       // 🔊 Speak at milestones (10, 20, 30…)
+    if (newCount > 0 && newCount % 10 === 0) {
+    speak(`${newCount} completed!`);
   }
+  }}
 
   // --- Main Mediapipe callback
   function onResults(results) {
@@ -237,6 +261,24 @@ function PoseCoach() {
           <option value="bicep">💪 Bicep Curls</option>
           <option value="squat">🦵 Squats</option>
         </select>
+            <label style={{ marginLeft: "1rem" }}>⏱️ Challenge Time: </label>
+        <input
+  type="number"
+  value={challengeTime}
+  onChange={(e) => setChallengeTime(Number(e.target.value))}
+  style={{ width: "60px", marginLeft: "0.5rem" }}
+/> seconds
+<button id="b"
+  onClick={() => {
+    setChallengeActive(true);
+    setIsRunning(true);
+    setTime(0);
+    setCount(0);
+    speak(`Challenge started for ${challengeTime} seconds!`);
+  }}
+>
+  Start Challenge
+</button>
       </div>
 
       <div className="dashboard">
