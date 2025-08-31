@@ -22,6 +22,12 @@
       "instructions": "Hold dumbbells, curl upward, control back down.",
       "equipment": "Dumbbell",
       "difficulty": "Beginner"
+    },{
+      "name": "Barbell Curl",
+      "media": "/assets/bi1.gif",
+      "instructions": "Hold barbell, curl upward, control back down.",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate"
     }
   ],
 
@@ -88,7 +94,7 @@
         "difficulty": "Intermediate"
       }
     ],
-      "quads":[
+    "quads":[
       {
         "name":"bulgarian split squat",
         "media":"assets/quads1.gif",
@@ -102,5 +108,96 @@
         "equipment":"Barbell",
         "difficulty":"Intermediate"
       }
+    ],
+    "shoulder":[
+      {
+        "name":"Elevated Pike Press",
+        "media":"assets/sh1.gif",
+        "instructions":"Start in a downward dog position with your feet elevated on a bench or box, lower your head towards the ground by bending your elbows, then push back up to the starting position.",
+        "equipment":"Bodyweight",
+        "difficulty":"Intermediate"
+      },
+      {
+        "name":"dumbbell seated overhead press",
+        "media":"assets/sh2.gif",
+        "instructions":"Sit on a bench with back support, hold a dumbbell in each hand at shoulder height, press the dumbbells overhead until your arms are fully extended, then lower them back to shoulder height.",
+        "equipment":"Dumbbell",
+        "difficulty":"Intermediate"
+      },
+      {
+        "name":"male barbell overhead press",
+        "media":"assets/sh3.gif",
+        "instructions":"Stand with feet shoulder-width apart, hold a barbell at shoulder height with an overhand grip, press the barbell overhead until your arms are fully extended, then lower it back to shoulder height.",
+        "equipment":"Barbell",
+        "difficulty":"Intermediate"
+      }
+    ],
+    "hamstrings":[
+    {
+    "name":"bodyweight glute bridge",
+    "media":"assets/ham1.gif",
+    "instructions":"Lie on your back with knees bent and feet flat on the ground, lift your hips towards the ceiling by squeezing your glutes, hold for a moment at the top, then lower back down.",
+    "equipment":"Bodyweight",
+    "difficulty":"Beginner"
+    },
+    {
+       "name": "Glute squart",
+        "media": "assets/glutes1.gif",
+        "instructions": "Stand with feet shoulder-width apart, lower hips back and down as if sitting in a chair, keep chest up and knees over toes, push through heels to return to standing position.",
+        "equipment": "Bodyweight",
+        "difficulty": "Beginner"
+    }
+    ],
+    "traps":[
+      {
+        "name":"dumbbell shrug",
+        "media":"assets/t1.gif",
+        "instructions":"Stand with feet shoulder-width apart, hold a dumbbell in each hand at your sides, shrug your shoulders up towards your ears, hold for a moment, then lower back down.",
+        "equipment":"Dumbbell",
+        "difficulty":"Beginner"
+      },
+      {
+        "name":"dumbbell seated shrug",
+        "media":"assets/t2.gif",
+        "instructions":"Sit on a bench with back support, hold a dumbbell in each hand at your sides, shrug your shoulders up towards your ears, hold for a moment, then lower back down.",
+        "equipment":"Dumbbell",
+        "difficulty":"Beginner"
+      }
+     
+    ],
+    "forearms":[
+      {
+        "name":"wrist curl",
+        "media":"assets/fi1.gif",
+        "instructions":"Sit on a bench with your forearms resting on your thighs, hold a dumbbell in each hand with palms facing up, curl your wrists upwards, hold for a moment, then lower back down.",
+        "equipment":"Dumbbell",
+        "difficulty":"Beginner"
+      },
+      {
+        "name":"reverse wrist curl",
+        "media":"assets/fi2.gif",
+        "instructions":"Sit on a bench with your forearms resting on your thighs, hold a dumbbell in each hand with palms facing down, curl your wrists upwards, hold for a moment, then lower back down.",
+        "equipment":"Dumbbell",
+        "difficulty":"Beginner"
+      }
+    ],
+    "lower back":[
+      {
+        "name":"Deadlift",
+    "media":"assets/deadlift.gif",
+    "instructions":"Stand with feet hip-width apart, bend at hips and knees to grasp barbell, lift by extending hips and knees to full stand.",
+    "equipment":"Barbell", 
+    "difficulty":"Intermediate"
+      }
+    ],
+    "back middle":[
+      {
+      "name": "Pull-up",
+    "media": "assets/male-bodyweight-pullup-front.gif",
+    "instructions": "Hang from bar, pull body up until chin is above bar.",         
+    "equipment": "Bodyweight",
+    "difficulty": "Intermediate"
+      }
     ]
+
 }
