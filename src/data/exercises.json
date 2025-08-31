@@ -87,5 +87,20 @@
         "equipment": "Barbell",
         "difficulty": "Intermediate"
       }
+    ],
+      "quads":[
+      {
+        "name":"bulgarian split squat",
+        "media":"assets/quads1.gif",
+        "instructions":"Stand a few feet in front of a bench, place one foot on the bench behind you, lower your body until your front thigh is parallel to the ground, push through your front heel to return to standing.",
+        "equipment":"Bodyweight",
+        "difficulty":"Intermediate"
+      },{
+        "name":"barbell highbar squat",
+        "media":"assets/quads2.gif",
+        "instructions":"Stand with feet shoulder-width apart, position a barbell on your upper traps, lower your body by bending at the hips and knees until your thighs are parallel to the ground, then push through your heels to return to standing.",
+        "equipment":"Barbell",
+        "difficulty":"Intermediate"
+      }
     ]
 }
