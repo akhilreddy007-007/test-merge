@@ -71,5 +71,21 @@
         "equipment": "Cable Machine",
         "difficulty": "Intermediate"
         }
+    ],
+    "glutes":[
+      {
+        "name": "Glute squart",
+        "media": "assets/glutes1.gif",
+        "instructions": "Stand with feet shoulder-width apart, lower hips back and down as if sitting in a chair, keep chest up and knees over toes, push through heels to return to standing position.",
+        "equipment": "Bodyweight",
+        "difficulty": "Beginner"
+      },
+      {
+        "name": "Hip Thrust",
+        "media": "assets/glutes2.gif",
+        "instructions": "Sit on the ground with your upper back against a bench, roll a barbell over your hips, drive through your heels to lift your hips until your body forms a straight line from shoulders to knees, squeeze your glutes at the top, lower back down.",
+        "equipment": "Barbell",
+        "difficulty": "Intermediate"
+      }
     ]
 }
